@@ -68,6 +68,7 @@
     "husky": "4.3.0",
     "json": "10.0.0",
     "lowdb": "1.0.0",
+    "material-ui-color-picker": "^3.5.1",
     "morgan": "1.10.0",
     "ncp": "2.0.0",
     "nodemon": "2.0.4",
