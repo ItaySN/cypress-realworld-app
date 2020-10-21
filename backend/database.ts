@@ -177,8 +177,9 @@ export const getUserByUsername = (username: string) => getUserBy("username", use
 
 export const createUser = (userDetails: Partial<User>): User => {
   const password = bcrypt.hashSync(userDetails.password!, 10);
+  const id = shortid();
   const user: User = {
-    id: shortid(),
+    id: id,
     uuid: v4(),
     firstName: userDetails.firstName!,
     lastName: userDetails.lastName!,
@@ -187,7 +188,8 @@ export const createUser = (userDetails: Partial<User>): User => {
     email: userDetails.email!,
     phoneNumber: userDetails.phoneNumber!,
     balance: userDetails.balance! || 0,
-    avatar: userDetails.avatar!,
+    // avatar: userDetails.avatar!,
+    avatar:`https://avatars.dicebear.com/api/human/${id}.svg`,
     defaultPrivacyLevel: userDetails.defaultPrivacyLevel!,
     createdAt: new Date(),
     modifiedAt: new Date(),
