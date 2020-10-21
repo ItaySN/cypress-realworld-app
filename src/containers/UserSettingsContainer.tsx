@@ -5,6 +5,7 @@ import { Interpreter } from "xstate";
 import { AuthMachineContext, AuthMachineEvents } from "../machines/authMachine";
 import { useService } from "@xstate/react";
 import { ReactComponent as PersonalSettingsIllustration } from "../svgs/undraw_personal_settings_kihd.svg";
+import AvatarEdit from "components/AvatarEdit";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -37,6 +38,9 @@ const UserSettingsContainer: React.FC<Props> = ({ authService }) => {
         </Grid>
         <Grid item style={{ width: "50%" }}>
           {currentUser && <UserSettingsForm userProfile={currentUser} updateUser={updateUser} />}
+        </Grid>
+        <Grid item style={{ width: "50%" }}>
+          {currentUser && <AvatarEdit id={currentUser.id} avatar={currentUser.avatar} />}
         </Grid>
       </Grid>
     </Paper>
