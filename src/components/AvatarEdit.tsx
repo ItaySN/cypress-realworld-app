@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {FormControl, FormControlLabel, Dialog, DialogActions, DialogContent, DialogTitle} from '@material-ui/core';
 import {Button, Radio, RadioGroup, Slider, Typography} from '@material-ui/core';
-import ColorPicker from "material-ui-color-picker";
+import "./AvatarEdit.css";
 
 export interface AvatarEditProps {
   id: string;
@@ -10,32 +10,33 @@ export interface AvatarEditProps {
 }
 
 const AvatarEdit: React.FC<AvatarEditProps> = ( {id, avatar, updateUser} ) => {
-  const [radius, setRadius] = useState<number>(0);
-  const [margin, setMargin] = useState<number>(0);
-  const [background, setBackground] = useState<string>("#000");
-  const [mood, setMood] = useState<string>("");
+  const [margin, setMargin] = useState<number>(5);
+  const [background, setBackground] = useState<string>("#123456");
+  const [mood, setMood] = useState<string>("happy");
   const [open, setOpen] = useState<boolean>(false);
 
-  const handleSliderChange = (event: unknown, newValue: number | number[], origin: string) => {
-    switch(origin) {
-      case "radius":
-        setRadius(newValue as number);
-        break;
-      case "margin":
-        setMargin(newValue as number);
-        break;
-    }
-  };
-  const handleColorChange = (newValue: string) => {
-    setBackground(newValue as string);
+  useEffect(() => {
+    setInitialValues();
+  },[open])
+  const setInitialValues = () => {
+    const urlParams = new URLSearchParams(avatar);
+    setMargin(urlParams.get('m') ? parseInt(urlParams.get('m') as string) : 0);
+    debugger;
+    setBackground(urlParams.get('b') !== null ? urlParams.get('r') as string : "#ffffff");
+    setMood(urlParams.get('mood[]') ? urlParams.get('mood[]') as string : "happy");
+    debugger;
+  }
+  const handleSliderChange = (event: unknown, newValue: number | number[]) => { 
+    setMargin(newValue as number);
   };
 
   const handleMoodChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMood((event.target as HTMLInputElement).value);
   };
 
-  const handleOpen = () => {
+  const handleOpen = () => { 
     setOpen(true);
+    console.log(avatar);
   };
 
   const handleClose = () => {
@@ -43,43 +44,33 @@ const AvatarEdit: React.FC<AvatarEditProps> = ( {id, avatar, updateUser} ) => {
   };
 
   const handleSave = () => {
-    /*
-      update avatar url
-    */
-    updateUser({ id: id, avatar: 'https://avatars.dicebear.com/api/human/DJv6wthWm.svg' });
+    updateUser({ id, avatar: `https://avatars.dicebear.com/api/male/${id}.svg?m=${margin}&b=%23${background.slice(1)}&mood[]=${mood}` });
     setOpen(false);
   };
 
   return (
-    <> {console.log(id,avatar)} {/* delete after using it elsewhere */}
+    <>  
       <Button variant="outlined" color="primary" onClick={handleOpen}>
         Open form dialog
       </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="edit-avatar-dialog">
+        <div id="wrapper" >
+      <div key="controllers-wrappers">
         <DialogTitle id="edit-avatar-dialog">Subscribe</DialogTitle>
         <DialogContent>
-          <FormControl component="fieldset">
-            <Typography id="radiusSliderLabel" gutterBottom>
-              Radius
-            </Typography>
-            <Slider
-              value={radius} 
-              onChange={(event, newValue) => handleSliderChange(event, newValue, "radius")}
-              aria-labelledby="radiusSliderLabel"
-            />
+            
             <Typography id="marginSliderLabel" gutterBottom>
               Margin
             </Typography>
             <Slider value={margin} 
-              onChange={(event, newValue) => handleSliderChange(event, newValue, "margin")}
-              aria-labelledby="marginSliderLabel" />
+              onChange={(event, newValue) => handleSliderChange(event, newValue)}
+              aria-labelledby="marginSliderLabel"
+              max={25} />
             <Typography id="colorPickerLabel" gutterBottom>
               Background Color:
             </Typography>
-            <ColorPicker
-              name='color'
-              defaultValue={background}
-              onChange={(color) => handleColorChange(color)} />
+            <input type="color" value={background} onChange={(e) => {
+              setBackground(e.target.value)}}/>
             <Typography id="moodLabel" gutterBottom>
               Mood:
             </Typography>
@@ -88,7 +79,6 @@ const AvatarEdit: React.FC<AvatarEditProps> = ( {id, avatar, updateUser} ) => {
               <FormControlLabel value="sad" control={<Radio color="primary" />} label="sad" />
               <FormControlLabel value="surprised" control={<Radio color="primary" />} label="surprised" />
             </RadioGroup>
-          </FormControl>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
@@ -98,6 +88,12 @@ const AvatarEdit: React.FC<AvatarEditProps> = ( {id, avatar, updateUser} ) => {
             Save
           </Button>
         </DialogActions>
+        </div>
+        <div id="img-wrapper" key="avatar-img">
+          {console.log(`MARGIN: ${margin}`)}
+          {background ? <img src={`https://avatars.dicebear.com/api/male/${id}.svg?m=${margin}&b=%23${background.slice(1)}&mood[]=${mood}`} alt=""/> : <></>}
+        </div>
+        </div>
       </Dialog>
     </>
   );

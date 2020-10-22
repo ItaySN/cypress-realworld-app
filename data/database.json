@@ -76,40 +76,28 @@
       "modifiedAt": "2020-05-21T15:15:33.944Z"
     },
     {
-      "id": "E6LYq1FgB",
-      "uuid": "be489a80-d9f7-4a8f-aa9f-965fb619577b",
-      "firstName": "oh",
-      "lastName": "no",
-      "username": "ohno",
-      "password": "$2a$10$Yg0aZhhkqAlBm6GpuYr.3OrA/CYPlZ1dJgxeyzZSryU6wiWNMTa.y",
-      "balance": 0,
-      "avatar": "https://avatars.dicebear.com/api/human/E6LYq1FgB.svg",
-      "createdAt": "2020-10-22T07:52:00.495Z",
-      "modifiedAt": "2020-10-22T07:52:00.495Z"
-    },
-    {
-      "id": "DJv6wthWm",
-      "uuid": "891d230c-2ec0-4fb4-9ea9-addd781ea481",
-      "firstName": "no",
-      "lastName": "oh",
-      "username": "nooh",
-      "password": "$2a$10$NQNFiN5M4iKjDNfuE7uP1.XAqqxqPXhiLthZVoVIAVREdEMr9d8t6",
+      "id": "GAhvSCMQ4",
+      "uuid": "3118abb0-ede2-4e37-90a4-503e9d9e40be",
+      "firstName": "c",
+      "lastName": "c",
+      "username": "c",
+      "password": "$2a$10$lzAE.hGpyQWKtyXw23U.4uYDIcJHS2ilVVEZLBWc1O4UgQDUqztjy",
       "balance": 0,
       "avatar": "https://avatars.dicebear.com/api/human/DJv6wthWm.svg",
-      "createdAt": "2020-10-22T12:37:48.718Z",
-      "modifiedAt": "2020-10-22T12:37:48.718Z"
+      "createdAt": "2020-10-22T14:15:52.162Z",
+      "modifiedAt": "2020-10-22T14:15:52.162Z"
     },
     {
-      "id": "Z7BNPaaeJ",
-      "uuid": "ed19e3ce-9d43-4fe3-aa8e-6bc254b6d9ae",
-      "firstName": "no",
-      "lastName": "no",
-      "username": "nono",
-      "password": "$2a$10$Pv1e3Mohb09e40M6SkbNGedCj6PeY2vFGQEw77KR1IoWUbA6laV/2",
+      "id": "u0jScmV4y",
+      "uuid": "c106c318-96dd-4dcf-8b7c-a25e01e91752",
+      "firstName": "g",
+      "lastName": "g",
+      "username": "g",
+      "password": "$2a$10$jiUUksAsW0JmI4w7Tl7kOujvKSdD7RsHXYlOXKBAjPe6u0bywFa6u",
       "balance": 0,
-      "avatar": "https://avatars.dicebear.com/api/human/DJv6wthWm.svg",
-      "createdAt": "2020-10-22T13:53:38.673Z",
-      "modifiedAt": "2020-10-22T13:53:38.673Z"
+      "avatar": "https://avatars.dicebear.com/api/male/u0jScmV4y.svg?r=9&m=16&b=%23ac7777&mood[]=happy",
+      "createdAt": "2020-10-22T14:41:23.948Z",
+      "modifiedAt": "2020-10-22T14:41:23.948Z"
     }
   ],
   "contacts": [
@@ -291,37 +279,26 @@
       "modifiedAt": "2020-05-21T22:40:28.910Z"
     },
     {
-      "id": "MFmM7QAUo",
-      "uuid": "22508426-3ae1-43c2-ac14-89ef703d59aa",
-      "userId": "E6LYq1FgB",
-      "bankName": "12345",
-      "accountNumber": "1234567890",
-      "routingNumber": "123456789",
-      "isDeleted": false,
-      "createdAt": "2020-10-22T07:52:10.199Z",
-      "modifiedAt": "2020-10-22T07:52:10.199Z"
-    },
-    {
-      "id": "cXXse9TVw",
-      "uuid": "d3a9277f-b8f7-4c4d-9d59-9fc66c751fc5",
-      "userId": "DJv6wthWm",
-      "bankName": "12345",
-      "accountNumber": "098765432",
-      "routingNumber": "098765432",
-      "isDeleted": false,
-      "createdAt": "2020-10-22T12:38:04.354Z",
-      "modifiedAt": "2020-10-22T12:38:04.354Z"
-    },
-    {
-      "id": "SfED0ess4",
-      "uuid": "71ed956e-e44f-4ae1-a05d-099ef992dafb",
-      "userId": "Z7BNPaaeJ",
-      "bankName": "12345",
+      "id": "NNjMj7Usf",
+      "uuid": "76bb1743-f610-463d-b350-0b604637aa1b",
+      "userId": "GAhvSCMQ4",
+      "bankName": "56133",
       "accountNumber": "123456789",
       "routingNumber": "123456789",
       "isDeleted": false,
-      "createdAt": "2020-10-22T13:53:59.247Z",
-      "modifiedAt": "2020-10-22T13:53:59.247Z"
+      "createdAt": "2020-10-22T14:16:16.266Z",
+      "modifiedAt": "2020-10-22T14:16:16.266Z"
+    },
+    {
+      "id": "uCuuOvWoz",
+      "uuid": "9d6ee0be-a930-437e-9aea-b26b11c4c15f",
+      "userId": "u0jScmV4y",
+      "bankName": "1654321",
+      "accountNumber": "123456789",
+      "routingNumber": "123456789",
+      "isDeleted": false,
+      "createdAt": "2020-10-22T14:41:55.227Z",
+      "modifiedAt": "2020-10-22T14:41:55.227Z"
     }
   ],
   "transactions": [
