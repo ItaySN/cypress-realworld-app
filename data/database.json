@@ -76,65 +76,40 @@
       "modifiedAt": "2020-05-21T15:15:33.944Z"
     },
     {
-      "id": "KpCTpSZ6W",
-      "uuid": "4b172527-7891-4481-b5e1-4cc91ed7ba15",
-      "firstName": "yuval",
-      "lastName": "ori",
-      "username": "itay",
-      "password": "$2a$10$ly.w.PqOVvb3D0ZET2xY.e0wHfEDny8kLUCfP0xqoVc6Uc865k.Jq",
-      "email": "yuvalori@gmail.com",
-      "phoneNumber": "1234567890",
+      "id": "E6LYq1FgB",
+      "uuid": "be489a80-d9f7-4a8f-aa9f-965fb619577b",
+      "firstName": "oh",
+      "lastName": "no",
+      "username": "ohno",
+      "password": "$2a$10$Yg0aZhhkqAlBm6GpuYr.3OrA/CYPlZ1dJgxeyzZSryU6wiWNMTa.y",
       "balance": 0,
-      "createdAt": "2020-10-21T12:02:18.224Z",
-      "modifiedAt": "2020-10-21T12:02:18.224Z"
+      "avatar": "https://avatars.dicebear.com/api/human/E6LYq1FgB.svg",
+      "createdAt": "2020-10-22T07:52:00.495Z",
+      "modifiedAt": "2020-10-22T07:52:00.495Z"
     },
     {
-      "id": "AlRsdAUxA",
-      "uuid": "468bb666-3702-45f6-bd1f-26091671feef",
-      "firstName": "yuval",
-      "lastName": "yuval",
-      "username": "ori",
-      "password": "$2a$10$HLrm49Fx4c0jK701E64EoO/JyMpLZwA6T0rnd5g90UqQrCkdGAH1e",
+      "id": "DJv6wthWm",
+      "uuid": "891d230c-2ec0-4fb4-9ea9-addd781ea481",
+      "firstName": "no",
+      "lastName": "oh",
+      "username": "nooh",
+      "password": "$2a$10$NQNFiN5M4iKjDNfuE7uP1.XAqqxqPXhiLthZVoVIAVREdEMr9d8t6",
       "balance": 0,
-      "avatar": "yuval",
-      "createdAt": "2020-10-21T12:29:55.538Z",
-      "modifiedAt": "2020-10-21T12:29:55.538Z"
+      "avatar": "https://avatars.dicebear.com/api/human/DJv6wthWm.svg",
+      "createdAt": "2020-10-22T12:37:48.718Z",
+      "modifiedAt": "2020-10-22T12:37:48.718Z"
     },
     {
-      "id": "QHLb625HY",
-      "uuid": "ffe9867b-b303-404c-8c57-7064b28f1da7",
-      "firstName": "itay",
-      "lastName": "itay",
-      "username": "itay",
-      "password": "$2a$10$YRFccCr0xZJyc9aL03GTN.sQEyurQJ.pJg4Gtg1i0/rdPOJNeLrqG",
+      "id": "Z7BNPaaeJ",
+      "uuid": "ed19e3ce-9d43-4fe3-aa8e-6bc254b6d9ae",
+      "firstName": "no",
+      "lastName": "no",
+      "username": "nono",
+      "password": "$2a$10$Pv1e3Mohb09e40M6SkbNGedCj6PeY2vFGQEw77KR1IoWUbA6laV/2",
       "balance": 0,
-      "avatar": "yuval",
-      "createdAt": "2020-10-21T12:33:01.862Z",
-      "modifiedAt": "2020-10-21T12:33:01.862Z"
-    },
-    {
-      "id": "3uTWeq_pS",
-      "uuid": "9bfc97d1-9ab9-4402-9df9-a1aef2c72738",
-      "firstName": "itay",
-      "lastName": "itay",
-      "username": "itayitay",
-      "password": "$2a$10$WyDAHD3FuZHHTbTDLR.hW..jJ3ZXIIcGdCmM2sSKcx2aA3vtdYPDG",
-      "balance": 0,
-      "avatar": "yuval",
-      "createdAt": "2020-10-21T12:33:30.061Z",
-      "modifiedAt": "2020-10-21T12:33:30.061Z"
-    },
-    {
-      "id": "NlahYcAH1",
-      "uuid": "6b7fa665-99d7-49fb-8628-b7dcc9914a22",
-      "firstName": "itay",
-      "lastName": "itay",
-      "username": "itayitayitay",
-      "password": "$2a$10$8.u.UUb3GfICAXc9TJYxl.S/GJ.zzx2m7sCipodLTXzk0KfG7dSuW",
-      "balance": 0,
-      "avatar": "yuval",
-      "createdAt": "2020-10-21T12:34:28.775Z",
-      "modifiedAt": "2020-10-21T12:34:28.775Z"
+      "avatar": "https://avatars.dicebear.com/api/human/DJv6wthWm.svg",
+      "createdAt": "2020-10-22T13:53:38.673Z",
+      "modifiedAt": "2020-10-22T13:53:38.673Z"
     }
   ],
   "contacts": [
@@ -316,37 +291,37 @@
       "modifiedAt": "2020-05-21T22:40:28.910Z"
     },
     {
-      "id": "ORswTiQQ4",
-      "uuid": "88f0cc59-9354-429c-974b-0629d2fd5cb9",
-      "userId": "KpCTpSZ6W",
-      "bankName": "yuvalll",
-      "accountNumber": "123456789",
+      "id": "MFmM7QAUo",
+      "uuid": "22508426-3ae1-43c2-ac14-89ef703d59aa",
+      "userId": "E6LYq1FgB",
+      "bankName": "12345",
+      "accountNumber": "1234567890",
       "routingNumber": "123456789",
       "isDeleted": false,
-      "createdAt": "2020-10-21T12:03:04.892Z",
-      "modifiedAt": "2020-10-21T12:03:04.892Z"
+      "createdAt": "2020-10-22T07:52:10.199Z",
+      "modifiedAt": "2020-10-22T07:52:10.199Z"
     },
     {
-      "id": "OA4NqS1AK",
-      "uuid": "f25f5092-3277-4922-83c8-6f64d9074fe6",
-      "userId": "AlRsdAUxA",
-      "bankName": "yuvalll",
-      "accountNumber": "123456789",
-      "routingNumber": "123456789",
+      "id": "cXXse9TVw",
+      "uuid": "d3a9277f-b8f7-4c4d-9d59-9fc66c751fc5",
+      "userId": "DJv6wthWm",
+      "bankName": "12345",
+      "accountNumber": "098765432",
+      "routingNumber": "098765432",
       "isDeleted": false,
-      "createdAt": "2020-10-21T12:32:45.635Z",
-      "modifiedAt": "2020-10-21T12:32:45.635Z"
+      "createdAt": "2020-10-22T12:38:04.354Z",
+      "modifiedAt": "2020-10-22T12:38:04.354Z"
     },
     {
-      "id": "6qyG858CO",
-      "uuid": "fc841ec1-68f4-41aa-93ba-ffd65f0fef26",
-      "userId": "NlahYcAH1",
-      "bankName": "yuvalll",
+      "id": "SfED0ess4",
+      "uuid": "71ed956e-e44f-4ae1-a05d-099ef992dafb",
+      "userId": "Z7BNPaaeJ",
+      "bankName": "12345",
       "accountNumber": "123456789",
       "routingNumber": "123456789",
       "isDeleted": false,
-      "createdAt": "2020-10-21T12:34:45.864Z",
-      "modifiedAt": "2020-10-21T12:34:45.864Z"
+      "createdAt": "2020-10-22T13:53:59.247Z",
+      "modifiedAt": "2020-10-22T13:53:59.247Z"
     }
   ],
   "transactions": [
@@ -9949,18 +9924,6 @@
       "requestResolvedAt": "",
       "createdAt": "2019-06-27T22:24:04.794Z",
       "modifiedAt": "2020-05-21T04:58:44.494Z"
-    },
-    {
-      "id": "XdmIXJP-3",
-      "uuid": "78f441f4-eee9-4eea-a04b-b9e13f4df818",
-      "amount": 32300,
-      "description": "hey",
-      "receiverId": "24VniajY1y",
-      "senderId": "KpCTpSZ6W",
-      "status": "pending",
-      "requestStatus": "pending",
-      "createdAt": "2020-10-21T12:04:56.590Z",
-      "modifiedAt": "2020-10-21T12:04:56.590Z"
     }
   ],
   "likes": [
@@ -10537,16 +10500,6 @@
       "isRead": false,
       "createdAt": "2019-10-19T20:50:49.292Z",
       "modifiedAt": "2020-05-21T21:00:50.192Z"
-    },
-    {
-      "id": "GJbEqdCX2J",
-      "uuid": "347eabfb-0538-4602-911f-b1ba68d9cb59",
-      "userId": "24VniajY1y",
-      "transactionId": "XdmIXJP-3",
-      "status": "requested",
-      "isRead": false,
-      "createdAt": "2020-10-21T12:04:56.600Z",
-      "modifiedAt": "2020-10-21T12:04:56.600Z"
     }
   ],
   "banktransfers": [
