@@ -76,28 +76,16 @@
       "modifiedAt": "2020-05-21T15:15:33.944Z"
     },
     {
-      "id": "GAhvSCMQ4",
-      "uuid": "3118abb0-ede2-4e37-90a4-503e9d9e40be",
-      "firstName": "c",
-      "lastName": "c",
-      "username": "c",
-      "password": "$2a$10$lzAE.hGpyQWKtyXw23U.4uYDIcJHS2ilVVEZLBWc1O4UgQDUqztjy",
+      "id": "otLNFOSqy",
+      "uuid": "d40cb402-43d2-495b-bee1-2ddc4be4a3b3",
+      "firstName": "oh",
+      "lastName": "no",
+      "username": "ohno",
+      "password": "$2a$10$QD6IHI9AFrR2/wctjqbjCeg/Rp1Daor.n/cyLZM2jfTphu7QkBL6G",
       "balance": 0,
-      "avatar": "https://avatars.dicebear.com/api/human/DJv6wthWm.svg",
-      "createdAt": "2020-10-22T14:15:52.162Z",
-      "modifiedAt": "2020-10-22T14:15:52.162Z"
-    },
-    {
-      "id": "u0jScmV4y",
-      "uuid": "c106c318-96dd-4dcf-8b7c-a25e01e91752",
-      "firstName": "g",
-      "lastName": "g",
-      "username": "g",
-      "password": "$2a$10$jiUUksAsW0JmI4w7Tl7kOujvKSdD7RsHXYlOXKBAjPe6u0bywFa6u",
-      "balance": 0,
-      "avatar": "https://avatars.dicebear.com/api/male/u0jScmV4y.svg?r=9&m=16&b=%23ac7777&mood[]=happy",
-      "createdAt": "2020-10-22T14:41:23.948Z",
-      "modifiedAt": "2020-10-22T14:41:23.948Z"
+      "avatar": "https://avatars.dicebear.com/api/human/otLNFOSqy.svg?m=9&b=%23efa4ec&mood[]=sad",
+      "createdAt": "2020-10-23T08:34:39.100Z",
+      "modifiedAt": "2020-10-23T08:34:39.100Z"
     }
   ],
   "contacts": [
@@ -279,26 +267,15 @@
       "modifiedAt": "2020-05-21T22:40:28.910Z"
     },
     {
-      "id": "NNjMj7Usf",
-      "uuid": "76bb1743-f610-463d-b350-0b604637aa1b",
-      "userId": "GAhvSCMQ4",
-      "bankName": "56133",
-      "accountNumber": "123456789",
+      "id": "rNBRFTSUo",
+      "uuid": "1b072837-18da-4c1d-9943-74edff9c214b",
+      "userId": "otLNFOSqy",
+      "bankName": "12345",
+      "accountNumber": "1234567890",
       "routingNumber": "123456789",
       "isDeleted": false,
-      "createdAt": "2020-10-22T14:16:16.266Z",
-      "modifiedAt": "2020-10-22T14:16:16.266Z"
-    },
-    {
-      "id": "uCuuOvWoz",
-      "uuid": "9d6ee0be-a930-437e-9aea-b26b11c4c15f",
-      "userId": "u0jScmV4y",
-      "bankName": "1654321",
-      "accountNumber": "123456789",
-      "routingNumber": "123456789",
-      "isDeleted": false,
-      "createdAt": "2020-10-22T14:41:55.227Z",
-      "modifiedAt": "2020-10-22T14:41:55.227Z"
+      "createdAt": "2020-10-23T08:35:00.015Z",
+      "modifiedAt": "2020-10-23T08:35:00.015Z"
     }
   ],
   "transactions": [
