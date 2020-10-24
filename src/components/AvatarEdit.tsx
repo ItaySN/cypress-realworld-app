@@ -88,7 +88,7 @@ const AvatarEdit: React.FC<AvatarEditProps> = ( {id, gender, avatar, updateUser}
                 </Typography>
                 <RadioGroup aria-label="colors" name="colors1" value={colors} onChange={handleColorsChange}>
                   <FormControlLabel value="blue" control={<Radio color="primary" />} label="blue" />
-                  <FormControlLabel value="lightGreen" control={<Radio color="primary" />} label="lightGreen" />
+                  <FormControlLabel value="lightGreen" control={<Radio color="primary" />} label="green" />
                   <FormControlLabel value="pink" control={<Radio color="primary" />} label="pink" />
                 </RadioGroup>
               </DialogContent>
