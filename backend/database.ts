@@ -189,7 +189,7 @@ export const createUser = (userDetails: Partial<User>): User => {
     phoneNumber: userDetails.phoneNumber!,
     gender: userDetails.gender!,
     balance: userDetails.balance! || 0,
-    avatar: userDetails.avatar! || `https://avatars.dicebear.com/api/${userDetails.gender === "other" ? `bottts/${id}.svg?colors[]=blue` : `${userDetails.gender}/${id}.svg`}`,
+    avatar: userDetails.avatar! || `https://avatars.dicebear.com/api/${userDetails.gender === "other" ? `bottts/${id}.svg?colors[]=blue` : `${userDetails.gender}/${id}.svg?mood[]=happy`}`,
     defaultPrivacyLevel: userDetails.defaultPrivacyLevel!,
     createdAt: new Date(),
     modifiedAt: new Date(),

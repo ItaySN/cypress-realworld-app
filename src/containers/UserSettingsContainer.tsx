@@ -33,14 +33,16 @@ const UserSettingsContainer: React.FC<Props> = ({ authService }) => {
         User Settings
       </Typography>
       <Grid container spacing={2} direction="row" justify="flex-start" alignItems="flex-start">
-        <Grid item>
-          <PersonalSettingsIllustration style={{ height: 200, width: 300 }} />
+        <Grid container item spacing={4} direction="column" justify="space-between" alignItems="flex-start" style={{ width: "50%", minWidth: 300 }}>
+          <Grid item>
+            <PersonalSettingsIllustration style={{ height: 200, width: 300 }} />
+          </Grid>
+          <Grid item>
+            {currentUser && <AvatarEdit id={currentUser.id} gender={currentUser.gender  === "other" ? "bottts" : currentUser.gender} avatar={currentUser.avatar} updateUser={updateUser} />}
+          </Grid>
         </Grid>
         <Grid item style={{ width: "50%" }}>
           {currentUser && <UserSettingsForm userProfile={currentUser} updateUser={updateUser} />}
-        </Grid>
-        <Grid item /*style={{ width: "50%" }}*/>
-          {currentUser && <AvatarEdit id={currentUser.id} gender={currentUser.gender  === "other" ? "bottts" : currentUser.gender} avatar={currentUser.avatar} updateUser={updateUser} />}
         </Grid>
       </Grid>
     </Paper>

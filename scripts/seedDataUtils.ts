@@ -113,7 +113,7 @@ export const getUserAvatar = (identifier: string, gender: string) => {
   if(gender === "other") {
     return `https://avatars.dicebear.com/api/bottts/${identifier}.svg?colors[]=blue`;
   } else {
-    return `https://avatars.dicebear.com/api/${gender}/${identifier}.svg`;
+    return `https://avatars.dicebear.com/api/${gender}/${identifier}.svg?mood[]=happy`;
   }
 };
 
