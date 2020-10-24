@@ -15,12 +15,14 @@ import { string, object, ref } from "yup";
 
 import { ReactComponent as RWALogo } from "../svgs/rwa-logo.svg";
 import Footer from "./Footer";
+import FormikSelect from "./FormikSelect";
 import { SignUpPayload } from "../models";
 import { AuthMachineContext, AuthMachineEvents } from "../machines/authMachine";
 
 const validationSchema = object({
   firstName: string().required("First Name is required"),
   lastName: string().required("Last Name is required"),
+  gender: string().required("Gender is required"),
   username: string().required("Username is required"),
   password: string()
     .min(4, "Password must contain at least 4 characters")
@@ -61,11 +63,12 @@ const SignUpForm: React.FC<Props> = ({ authService }) => {
     lastName: "",
     username: "",
     password: "",
+    gender: "",
     confirmPassword: "",
   };
 
   const signUpPending = (payload: SignUpPayload) => sendAuth("SIGNUP", payload);
-
+    
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -120,6 +123,16 @@ const SignUpForm: React.FC<Props> = ({ authService }) => {
                     helperText={touched || value !== initialValue ? error : ""}
                     {...field}
                   />
+                )}
+              </Field>
+              <Field name="gender">
+                {({ field, meta: { error, value, initialValue, touched } }: FieldProps) => (
+                <FormikSelect
+                  name="gender"
+                  items={[{label: "Male", value: "male"}, {label: "Female", value: "female"}, {label: "Other", value: "other"}]}
+                  label="Gender"
+                  required>
+                </FormikSelect>
                 )}
               </Field>
               <Field name="username">

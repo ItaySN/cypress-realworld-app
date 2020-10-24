@@ -109,12 +109,22 @@ export const getRandomTransactions = (baseCount: number, baseTransactions: Trans
     )
   ).slice(0, baseCount);
 
-export const getUserAvatar = (identifier: string) => {
-  return `https://avatars.dicebear.com/api/human/${identifier}.svg`;
+export const getUserAvatar = (identifier: string, gender: string) => {
+  if(gender === "other") {
+    return `https://avatars.dicebear.com/api/bottts/${identifier}.svg?colors[]=blue`;
+  } else {
+    return `https://avatars.dicebear.com/api/${gender}/${identifier}.svg`;
+  }
 };
+
+export const getUserGender = (): string => {
+  const genders = ["male", "female", "other"];
+  return genders[Math.floor(Math.random() * 3)];
+}
 
 export const createFakeUser = (): User => {
   const id = shortid();
+  const gender = getUserGender();
   return {
     id,
     uuid: faker.random.uuid(),
@@ -124,7 +134,8 @@ export const createFakeUser = (): User => {
     password: passwordHash,
     email: faker.internet.email(),
     phoneNumber: faker.phone.phoneNumberFormat(0),
-    avatar: getUserAvatar(id),
+    gender: gender,
+    avatar: getUserAvatar(id, gender),
     defaultPrivacyLevel: faker.helpers.randomize([
       DefaultPrivacyLevel.public,
       DefaultPrivacyLevel.private,

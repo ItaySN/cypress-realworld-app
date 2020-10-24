@@ -40,7 +40,7 @@ const UserSettingsContainer: React.FC<Props> = ({ authService }) => {
           {currentUser && <UserSettingsForm userProfile={currentUser} updateUser={updateUser} />}
         </Grid>
         <Grid item /*style={{ width: "50%" }}*/>
-          {currentUser && <AvatarEdit id={currentUser.id} avatar={currentUser.avatar} updateUser={updateUser} />}
+          {currentUser && <AvatarEdit id={currentUser.id} gender={currentUser.gender  === "other" ? "bottts" : currentUser.gender} avatar={currentUser.avatar} updateUser={updateUser} />}
         </Grid>
       </Grid>
     </Paper>

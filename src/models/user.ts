@@ -13,6 +13,7 @@ export interface User {
   password: string;
   email: string;
   phoneNumber: string;
+  gender: string;
   balance: number;
   avatar: string;
   defaultPrivacyLevel: DefaultPrivacyLevel;
@@ -29,4 +30,4 @@ export type SignInPayload = Pick<User, "username" | "password"> & {
   remember?: Boolean;
 };
 
-export type SignUpPayload = Pick<User, "username" | "password" | "firstName" | "lastName">;
+export type SignUpPayload = Pick<User, "username" | "password" | "firstName" | "lastName" | "gender">;
