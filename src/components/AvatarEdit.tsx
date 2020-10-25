@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {FormControlLabel, Dialog, DialogActions, DialogContent, DialogTitle} from '@material-ui/core';
 import {Button, Radio, RadioGroup, Slider, Typography} from '@material-ui/core';
+import styled from 'styled-components';
 import "./AvatarEdit.css";
 
 export interface AvatarEditProps {
@@ -9,6 +10,29 @@ export interface AvatarEditProps {
   avatar: string;
   updateUser: Function;
 }
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  margin: auto;
+`;
+const ImgContainer = styled.div`
+  width: 250px;
+  height: 250px;
+  margin: auto;   
+`;
+// interface ColorProps {
+//   value: string;
+//   onchange: function;
+// }
+const ColorInput = styled.input.attrs((propsObj: {background:string, onchange:Function}) => ({
+  type: "color",
+  value: propsObj.background,
+  onChange: propsObj.onchange
+}))`
+  width: 100%;
+  margin-bottom: 15px;
+`;
 
 const AvatarEdit: React.FC<AvatarEditProps> = ( {id, gender, avatar, updateUser} ) => {
   const [size, setSize] = useState<number>(0);
@@ -67,9 +91,9 @@ const AvatarEdit: React.FC<AvatarEditProps> = ( {id, gender, avatar, updateUser}
           Customize your avatar
         </Button>
         <Dialog open={open} onClose={handleClose} aria-labelledby="edit-avatar-dialog">
-          <div id="wrapper">
+          <DialogTitle id="edit-avatar-dialog">Customize your avatar</DialogTitle>
+          <Wrapper>
             <div key="controllers-wrappers">
-              <DialogTitle id="edit-avatar-dialog">Customize your avatar</DialogTitle>
               <DialogContent>
                 <Typography id="sizeSliderLabel" gutterBottom>
                   Size
@@ -81,8 +105,10 @@ const AvatarEdit: React.FC<AvatarEditProps> = ( {id, gender, avatar, updateUser}
                 <Typography id="colorPickerLabel" gutterBottom>
                   Background Color:
                 </Typography>
-                <input type="color" value={background} onChange={(e) => {
-                  setBackground(e.target.value)}}/>
+                <ColorInput 
+                  background={background}
+                  onchange={(e: React.ChangeEvent<HTMLInputElement>) => {setBackground(e.currentTarget.value)}}>
+                </ColorInput>
                 <Typography id="moodLabel" gutterBottom>
                   Color:
                 </Typography>
@@ -101,13 +127,13 @@ const AvatarEdit: React.FC<AvatarEditProps> = ( {id, gender, avatar, updateUser}
                 </Button>
               </DialogActions>
             </div>
-            <div id="img-wrapper" key="avatar-img">
+            <ImgContainer>
               <img
                 src={`https://avatars.dicebear.com/api/${gender}/${id}.svg?m=${size}&b=%23${background.slice(1)}&colors[]=${colors}`}
                 alt="avatar-preview"
               />
-            </div>
-          </div>
+            </ImgContainer>
+          </Wrapper>
         </Dialog>
       </>
     );
@@ -118,9 +144,9 @@ const AvatarEdit: React.FC<AvatarEditProps> = ( {id, gender, avatar, updateUser}
           Customize your avatar
         </Button>
         <Dialog open={open} onClose={handleClose} aria-labelledby="edit-avatar-dialog">
-          <div id="wrapper">
+          <DialogTitle id="edit-avatar-dialog">Customize your avatar</DialogTitle>
+          <Wrapper>
             <div key="controllers-wrappers">
-              <DialogTitle id="edit-avatar-dialog">Customize your avatar</DialogTitle>
               <DialogContent>
                 <Typography id="sizeSliderLabel" gutterBottom>
                   Size
@@ -132,8 +158,10 @@ const AvatarEdit: React.FC<AvatarEditProps> = ( {id, gender, avatar, updateUser}
                 <Typography id="colorPickerLabel" gutterBottom>
                   Background Color:
                 </Typography>
-                <input type="color" value={background} onChange={(e) => {
-                  setBackground(e.target.value)}}/>
+                <ColorInput 
+                  background={background}
+                  onchange={(e: React.ChangeEvent<HTMLInputElement>) => {setBackground(e.currentTarget.value)}}>
+                </ColorInput>
                 <Typography id="moodLabel" gutterBottom>
                   Mood:
                 </Typography>
@@ -152,13 +180,13 @@ const AvatarEdit: React.FC<AvatarEditProps> = ( {id, gender, avatar, updateUser}
                 </Button>
               </DialogActions>
             </div>
-            <div id="img-wrapper" key="avatar-img">
+            <ImgContainer>
               <img
                 src={`https://avatars.dicebear.com/api/${gender}/${id}.svg?m=${size}&b=%23${background.slice(1)}&mood[]=${mood}`}
                 alt="avatar-preview"
               />
-            </div>
-          </div>
+            </ImgContainer>
+          </Wrapper>
         </Dialog>
       </>
     );
